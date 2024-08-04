@@ -33,6 +33,23 @@
 
 <body>
    <style>
+             
+
+             .text-container {
+            font-size: 2em;
+            font-family: Arial, sans-serif;
+            color: rgb(226, 55, 126);
+            position: relative;
+            height: 1em;
+            width: max-content;
+            white-space: nowrap;
+            overflow: hidden;
+            font-weight: bold;
+        }
+
+        .text {
+            display: none;
+        }
       .header_section {
          position: relative;
          width: 100%;
@@ -209,6 +226,7 @@
             startTypingAnimation();
          });
       </script>
+   
    </div>
 </div>
 
@@ -227,8 +245,17 @@
                               <div class="row">
                                  <div class="col-md-12">
                                     <div class="">
-                                       <h1 class="banner_taital" id="banner-title"></h1>
-                                       <p class="banner_text" id="banner-text"></p>
+                                       
+                                       <h1 class="text-light" >We're not just a</h1>
+
+                                       <!-- <h1 class="banner_taital" id="banner-title"></h1>
+                                       <p class="banner_text" id="banner-text"></p> -->
+                                       <div class="text-container" id="text-container" style="height: 50px;">
+                                          <h1 class="text " >Business development agency</h1>
+                                          <h1 class="text ">events & marketing agency</h1>
+                                      </div>
+                                      <h1 class="text-light" >We're both in equal measures.</h1>
+
 
                                        <div class="btn_main">
                                           <div class="started_bt active"><a href="contact.html">Get A Quote</a></div>
@@ -259,7 +286,45 @@
          </div>
       </div>
    </div>
+   
+   <script>
+      const texts = document.querySelectorAll('.text');
+      const container = document.getElementById('text-container');
+      let currentTextIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typingSpeed = 75;
+      const deletingSpeed = 40;
+      const pauseTime = 1000;
 
+      function type() {
+          const currentText = texts[currentTextIndex];
+          if (isDeleting) {
+              if (charIndex > 0) {
+                  container.textContent = currentText.textContent.substring(0, charIndex - 1);
+                  charIndex--;
+                  setTimeout(type, deletingSpeed);
+              } else {
+                  isDeleting = false;
+                  currentText.style.display = 'none';
+                  currentTextIndex = (currentTextIndex + 1) % texts.length;
+                  setTimeout(type, typingSpeed);
+              }
+          } else {
+              if (charIndex < currentText.textContent.length) {
+                  container.textContent = currentText.textContent.substring(0, charIndex + 1);
+                  charIndex++;
+                  setTimeout(type, typingSpeed);
+              } else {
+                  isDeleting = true;
+                  setTimeout(type, pauseTime);
+              }
+          }
+      }
+
+      texts[currentTextIndex].style.display = 'block';
+      type();
+  </script>
 
    <!-- banner section start
           <div class="banner_section layout_padding">
