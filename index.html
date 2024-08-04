@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>Jitamani Africa</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/logo.png" type="image/gif" />
+   <!-- font css -->
+   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800|Raleway:400,600,700,800&display=swap"
+      rel="stylesheet">
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+
+<body>
+   <style>
+      .header_section {
+         position: relative;
+         width: 100%;
+         height: 75vh;
+         overflow: hidden;
+      }
+
+      .header_section video {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transform: translate(-50%, -50%);
+         z-index: -1;
+         /* Ensure the video is behind other content */
+      }
+
+      .header_content {
+         position: relative;
+         z-index: 1;
+         /* Ensure the content is above the video */
+         color: white;
+         text-align: center;
+         padding-top: 0;
+         /* Remove padding to start content from the top */
+      }
+
+      .navbar {
+         position: sticky;
+         background: rgba(87, 236, 204, 0.8);
+         /* Make navbar slightly transparent */
+      }
+   </style>
+
+   <!-- <video autoplay loop muted>
+          <source src="images/bg.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video> -->
+   <div class="container header_content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+         <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo"
+               style="height: 100px !important;"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link text-secondary" href="index.html">Who We Are</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-secondary" href="services.html">Services</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-secondary" href="about.html">About</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-secondary" href="features.html">Features</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-secondary" href="team.html">Team</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-secondary" href="blog.html">Blog</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-secondary" href="contact.html">Contact</a>
+               </li>
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                      <div class="search_bt">
+                          <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                      </div>
+                  </form> -->
+         </div>
+      </nav>
+      <style>
+         #banner-title,
+         #banner-text {
+            /* font-size: 2rem; */
+            white-space: pre-wrap;
+            /* Preserve whitespace and wrapping */
+            overflow-wrap: normal;
+            /* Prevent breaking of words */
+            word-break: normal;
+            /* Prevent breaking of words */
+         }
+
+         .letter {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards, shimmer 2s infinite;
+         }
+
+         @keyframes fadeIn {
+            to {
+               opacity: 1;
+            }
+         }
+
+         @keyframes shimmer {
+            0% {
+               color: #28f7a7;
+            }
+
+            50% {
+               color: #2949ff;
+            }
+
+            100% {
+               color: #ebe5e5;
+            }
+         }
+      </style>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const titleText = "We are not just an " + " Event and Business  Consultancy ";
+            const subtitleText = "We are both in equal measure";
+            const typingDelay = 100;
+            const pauseDelay = 2000;
+
+            function typeText(elementId, text, delay = 100, callback = null) {
+               const element = document.getElementById(elementId);
+               element.innerHTML = '';  // Clear the element
+
+               Array.from(text).forEach((char, index) => {
+                  const span = document.createElement('span');
+                  span.className = 'letter';
+                  span.style.animationDelay = `${index * delay}ms`;
+                  span.textContent = char;
+
+                  if (char === ' ') {
+                     span.style.width = '0.5em';  // Adjust width for space to handle word spacing
+                  }
+
+                  element.appendChild(span);
+               });
+
+               if (callback) {
+                  setTimeout(callback, text.length * delay + pauseDelay);
+               }
+            }
+
+            function startTypingAnimation() {
+               typeText('banner-title', titleText, typingDelay, () => {
+                  typeText('banner-text', subtitleText, typingDelay, () => {
+                     setTimeout(startTypingAnimation, pauseDelay);  // Repeat the animation after a pause
+                  });
+               });
+            }
+
+            startTypingAnimation();
+         });
+      </script>
+   </div>
+
+   <div  style="background-color: #000000;" >
+
+   <div class="container"">
+      <div class="row">
+         <div class="col-md-6 col-sm-12">
+            <div class="p-3  bg-light">
+               <!-- banner section start -->
+               <div class="banner_section layout_padding">
+                  <div class="container">
+                     <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                           <div class="carousel-item active">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="">
+                                       <h1 class="banner_taital" id="banner-title"></h1>
+                                       <p class="banner_text" id="banner-text"></p>
+
+                                       <div class="btn_main">
+                                          <div class="started_bt active"><a href="contact.html">Get A Quote</a></div>
+                                          <div class="buy_bt"><a href="#">About Us</a></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        </a>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-sm-12">
+            <div class="p-3  bg-light">
+               <video autoplay loop muted style="height: 500px; width: 500px;">
+                  <source src="images/bg.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- banner section start
+          <div class="banner_section layout_padding">
+              <div class="container">
+                  <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="banner_taital_main">
+                                       <h1 class="banner_taital" id="banner-title"></h1>
+                                       <p class="banner_text" id="banner-text"></p>
+                                       
+                                          <div class="btn_main">
+                                              <div class="started_bt active"><a href="contact.html">Get A Quote</a></div>
+                                              <div class="buy_bt"><a href="#">About Us</a></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                     
+                      </a>
+                      </a>
+                  </div>
+              </div>
+          </div> -->
+   <!-- banner section end -->
+   </div>
+
+
+   <!-- banner section end -->
+   </div>
+   <!-- header section end -->
+   <!-- services section start -->
+   <div class="services_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="services_main">
+                  <hr class="border">
+                  <h1 class="services_taital">Our Services</h1>
+                  <hr class="border">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="services_section layout_padding" style="background-color: #0b0c10; ">
+      <div class="container">
+
+         <div class="services_section_2" style="padding-bottom: 2rem;">
+            <div class="col-md-12">
+               <div class="row">
+                  <div class="col-md-6">
+                     <!-- <div class="icon_img"><img src="images/icon-1.png"></div> -->
+                     <h3 class="bitcoin_text" style="color:white;  text-align: start; ">Development Consultancy </h3>
+                     <p class="services_text" style="color:white;  text-align: start; width: 100%;">Strategic Planning,
+                        We provide comprehensive business planning and strategy
+                        development to help your business navigate the competitive market.
+                        Operational Efficiency, Optimize your operations with our expert guidance to
+                        enhance productivity and profitability.
+                        Market Analysis, In-depth market research and analysis to identify opportunities
+                        and inform decision-making.
+                     </p>
+                     
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-4">
+                     <video width="400" height="300" autoplay loop muted>
+                        <source src="541058089196Growing.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                     </video>
+                  </div>
+               </div>
+
+               <br><br>
+
+
+               <div class="row">
+                  <div class="col-md-6">
+                     <!-- <div class="icon_img"><img src="images/icon-1.png"></div> -->
+                     <h3 class="bitcoin_text" style="color:white;  text-align: start;">Event Curation & Execution</h3>
+                     <p class="services_text" style="color:white;  text-align: start; width: 100%;">Event Planning,
+                        Detailed and customized event planning to align with your
+                        brand vision and objectives.
+                        Creative Concepts, Innovative and engaging event concepts tailored to the
+                        Food, Fashion, Fitness, and Music industries.
+                        Execution & Management, End-to-end event management ensuring seamless
+                        execution and memorable experiences.
+                     </p>
+                     
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-4">
+                     <video width="400" height="300" autoplay loop muted>
+                        <!-- <source src="541058089196Growing.webm" type="video/webm"> -->
+                        Your browser does not support the video tag.
+                     </video>
+                  </div>
+               </div>
+               <br><br>
+
+
+               <div class="row">
+                  <div class="col-md-6">
+                     <!-- <div class="icon_img"><img src="images/icon-1.png"></div> -->
+                     <h3 class="bitcoin_text" style="color:white;  text-align: start;">Marketing Consultancy</h3>
+                     <p class="services_text" style="color:white;  text-align: start; width: 100%;">Brand Development,
+                        Crafting compelling brand identities and strategies to
+                        stand out in the market.
+                        Digital Marketing, Utilizing digital platforms to enhance your online presence
+                        and engage with your target audience.
+                        Campaign Management, Designing and managing effective marketing
+                        campaigns to drive awareness and sales.
+
+                     </p>
+                     
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-4">
+                     <video width="400" height="300" autoplay loop muted>
+                        <source src="images/VaynerMedia - Home.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                     </video>
+                  </div>
+               </div><br><br>
+
+
+               <div class="row">
+                  <div class="col-md-6">
+                     <!-- <div class="icon_img"><img src="images/icon-1.png"></div> -->
+                     <h3 class="bitcoin_text" style="color:white;  text-align: start;">Sales Management</h3>
+                     <p class="services_text" style="color:white;  text-align: start; width: 100%;">Sales Strategy,
+                        Developing robust sales strategies to boost your revenue and
+                        market share.
+                        Sales Training, Empowering your sales team with the skills and knowledge to
+                        excel.
+                        Performance Monitoring, Continuous monitoring and optimization of sales
+                        processes to achieve targets.
+
+                     </p>
+                     
+                  </div>
+                  <div class="col-md-2"></div>
+                  <div class="col-md-4">
+                     <video width="400" height="300" autoplay loop muted>
+                        <!-- <source src="541058089196Growing.webm" type="video/webm"> -->
+                        Your browser does not support the video tag.
+                     </video>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- services section end -->
+   <!-- work section start -->
+   <div class="work_section layout_padding" style="background-color: #00808028;">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="work_main">
+                  <hr class="border">
+                  <h1 class="services_taital">Our Focus Areas</h1>
+                  <hr class="border">
+               </div>
+               <p class="work_text">Our mission is to empower businesses and brands to achieve their fullest potential
+                  through strategic consultancy, innovative event curation, and exceptional marketing and sales
+                  managemen </p>
+            </div>
+         </div>
+         <div class="work_section_2">
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="work_img"><img src="images/food.jpg" height="200px"></div>
+                  <div class="work_box">
+                     <h3 class="payments_text">Food </h3>
+                     <p class="lorem_text">Consultancy for restaurants, food brands, and culinary events.
+                        Marketing and sales strategies tailored to the food industry.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="work_img"><img src="images/fashion.jpg" height="200px"></div>
+                  <div class="work_box ">
+                     <h3 class="payments_text ">Fashion</h3>
+                     <p class="lorem_text ">Support for fashion brands, designers, and fashion events.
+                        Creating impactful fashion marketing campaigns and sales strategies.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="work_img"><img src="images/fitness.jpg" height="200px"></div>
+                  <div class="work_box">
+                     <h3 class="payments_text">Fitness </h3>
+                     <p class="lorem_text">Consultancy for fitness brands, gyms, and wellness events.
+                        Marketing strategies to promote fitness services and products.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="work_img"><img src="images/music.jpg" height="200px"></div>
+                  <div class="work_box">
+                     <h3 class="payments_text">Music </h3>
+                     <p class="lorem_text"> Event curation for concerts, festivals, and music promotions.
+                        Marketing and sales management for music artists and events.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
+         </div>
+      </div>
+   </div>
+   <!-- work section end -->
+   <!-- features section start -->
+
+
+   <!-- features section end -->
+   <!-- team section start -->
+   <!-- <div class="team_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="team_main">
+                  <hr class="border">
+                  <h1 class="services_taital">Excellent Team Workers</h1>
+                  <hr class="border">
+               </div>
+            </div>
+         </div>
+         <div class="team_section_2">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="client_box">
+                     <div class="team_img"><img src="images/hi.png" style="            border-radius: 50%;
+                        "></div>
+                     <h3 class="client_name">Seina Naimash.</h3>
+                     <p class="passages_text">Founder</p>
+                  </div>
+                  <div class="team_social_icon">
+                     <ul>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+    
+            </div>
+         </div>
+      </div>
+   </div> -->
+   <!-- team section end -->
+   <!-- contact section start -->
+   <div class="contact_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h1 class="contact_taital">REQUEST A CALL BACK</h1>
+            </div>
+         </div>
+         <div class="contact_section_2">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="mail_section map_form_container">
+
+                     <style>
+                        .mail_text {
+                           width: 100%;
+                           padding: 10px;
+                           margin: 5px 0;
+                        }
+
+                        .massage-bt {
+                           width: 100%;
+                           padding: 10px;
+                           margin: 5px 0;
+                        }
+
+                        .btn_main {
+                           margin-top: 10px;
+                        }
+
+                        .send_bt a {
+                           display: block;
+                           padding: 10px 20px;
+                           background-color: #02a763;
+                           color: #fff;
+                           text-align: center;
+                           text-decoration: none;
+                        }
+                     </style>
+
+                     <form id="contactForm">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <input type="text" class="mail_text" placeholder="Your Name" name="name" required>
+                           </div>
+                           <div class="col-md-6">
+                              <input type="email" class="mail_text" placeholder="Email" name="email" required>
+                           </div>
+                           <div class="col-md-6">
+                              <input type="text" class="mail_text" placeholder="Phone Number" name="phone" required>
+                           </div>
+                           <div class="col-md-6">
+                              <input type="text" class="mail_text" placeholder="Subject" name="subject" required>
+                           </div>
+                        </div>
+                        <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="message"
+                           required></textarea>
+                        <div class="btn_main">
+                           <div class="send_bt active"><a href="#" id="sendButton">Send</a></div>
+                        </div>
+                     </form>
+
+                     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                     <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                           <div class="modal-content">
+                              <div class="modal-header">
+                                 <h5 class="modal-title" id="messageModalLabel">Message Status</h5>
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                 </button>
+                              </div>
+                              <div class="modal-body" id="messageModalBody">
+                                 <!-- Message will be inserted here by JavaScript -->
+                              </div>
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <script>
+                        $(document).ready(function () {
+                           $('#sendButton').click(function (event) {
+                              event.preventDefault();
+
+                              $.ajax({
+                                 type: 'POST',
+                                 url: $('#contactForm').attr('action'),
+                                 data: $('#contactForm').serialize(),
+                                 success: function (response) {
+                                    $('#messageModalLabel').text('Success');
+                                    $('#messageModalBody').text('Message sent successfully!');
+                                    $('#contactForm')[0].reset();
+                                    $('#messageModal').modal('show');
+                                 },
+                                 error: function () {
+                                    $('#messageModalLabel').text('Error');
+                                    $('#messageModalBody').text('There was an error sending the message.');
+                                    $('#messageModal').modal('show');
+                                 }
+                              });
+                           });
+                        });
+                     </script>
+
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="contact_img"><img src="images/consult.png"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- contact section end -->
+   <!-- client section start -->
+   <!-- <div class="client_section layout_padding">
+      <div class="container">
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <h1 class="services_taital" style="justify-content: center; text-align: center;">Our Mission </h1>
+
+               <div class="carousel-item active">
+                  <h1 class="client_taital">What Is Says Our Clients</h1>
+                  <p class="client_text">To be the leading consultancy firm in Africa, dedicated to fostering growth and
+                     innovation within the Food, Fashion, Fitness, and Music industries. We strive to create lasting
+                     partnerships with our clients, offering them unparalleled service and expertise to transform their
+                     visions into reality. </p>
+                  <div class="client_img"><img src="images/client-img.png"></div> 
+                   <h3 class="magna_text">Seina Naimash.</h3>
+                  <p class="consectetur_text">
+
+                  </p>
+               </div> -->
+               <!-- <div class="carousel-item">
+                  <h1 class="client_taital">What Is Says Our Clients</h1>
+                  <p class="client_text">eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                  <div class="client_img"><img src="images/client-img.png"></div>
+                  <h3 class="magna_text">Magna Aliqua.</h3>
+                  <p class="consectetur_text"> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+               </div>
+               <div class="carousel-item">
+                  <h1 class="client_taital">What Is Says Our Clients</h1>
+                  <p class="client_text">eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                  <div class="client_img"><img src="images/client-img.png"></div>
+                  <h3 class="magna_text">Magna Aliqua.</h3>
+                  <p class="consectetur_text"> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+               </div> -->
+            <!-- </div>
+         </div>
+      </div>
+   </div> -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <a href="https://api.whatsapp.com/send?phone=254713830965&text=Hello%21%20I%20am%20interested%20in%20your%20services."
+      class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+   </a>
+   <!-- client section end -->
+   <!-- footer section start -->
+   <div class="footer_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-sm-6">
+               <h3 class="useful_text">Our Company</h3>
+               <div class="footer_menu">
+                  <ul>
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="services.html">Services</a></li>
+                     <!-- <li><a href="#">Pricing</a></li> -->
+                     <li><a href="blog.html">Blog</a></li>
+                     <li><a href="contact.html">Contact</a></li>
+                  </ul>
+               </div>
+            </div>
+            <!-- <div class="col-lg-3 col-sm-6">
+               <h3 class="useful_text">Our Company</h3>
+               <div class="footer_menu">
+                  <ul>
+                     <li><a href="#">Faq</a></li>
+                     <li><a href="#">Terms Of Services</a></li>
+                     <li><a href="#">404</li>
+                     <li><a href="#">Register</a></li>
+                     <li><a href="#">Login</a></li>
+                     <li><a href="#">Coming Soon</a></li>
+                  </ul>
+               </div>
+            </div> -->
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="useful_text">Contact us</h1>
+               <div class="location_text">
+                  <ul>
+                     <li>
+                        <a href="#"><span class="padding_left_10"><i class="fa fa-map-marker"
+                                 aria-hidden="true"></i></span>Location</a>
+                     </li>
+                     <li>
+                        <a href="#"><span class="padding_left_10"><i class="fa fa-phone"
+                                 aria-hidden="true"></i></span>+254 713 830 965</a>
+                     </li>
+                     <li>
+                        <a href="#"><span class="padding_left_10"><i class="fa fa-envelope"
+                                 aria-hidden="true"></i></span>jitamaniafrica@gmail.com </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+               <h1 class="useful_text">Newsletter</h1>
+               <div class="form-group">
+                  <textarea class="update_mail" placeholder="Your Email" rows="5" id="comment"
+                     name="Your Email"></textarea>
+                  <div class="subscribe_bt"><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+               </div>
+               <div class="footer_social_icon">
+                  <ul>
+                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- footer section end -->
+   <!-- copyright section start -->
+   <div class="copyright_section">
+      <div class="container">
+         <p class="copyright_text">2024 All Rights Reserved. Design by <a href="https://wa.me/254705374455?text=I'm%20interested%20in%20Website%20services%20for%20
+            ">Gitau</a>
+         </p>
+      </div>
+   </div>
+   <!-- copyright section end -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+</body>
+
+</html>
