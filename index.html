@@ -51,34 +51,8 @@
         .text {
             display: none;
         }
-      .header_section {
-         position: relative;
-         width: 100%;
-         height: 75vh;
-         overflow: hidden;
-      }
+    
 
-      .header_section video {
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         transform: translate(-50%, -50%);
-         z-index: -1;
-         /* Ensure the video is behind other content */
-      }
-
-      .header_content {
-         position: relative;
-         z-index: 1;
-         /* Ensure the content is above the video */
-         color: white;
-         text-align: center;
-         padding-top: 0;
-         /* Remove padding to start content from the top */
-      }
 
       .navbar {
          position: sticky;
@@ -91,16 +65,12 @@
           <source src="images/bg.mp4" type="video/mp4">
           Your browser does not support the video tag.
       </video> -->
-      <div style="background-color: #000000;">
-   <div class="container header_content" style="padding-top: 0%;">
-      <nav class=" navbar-expand-lg  sticky-top" >
-         <a class="navbar-brand" href="index.html">
-         <div style="height: 10px !important;"></div>   
-         </a>
-         <button class="navbar-toggler bg-info" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: -250px;">
-            <!-- <span class="navbar-toggler-icon " style="color: #fff;"></span> -->
-            <i class="fa fa-bars"></i>
+      <div class="header_section" style="background-color: black;">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand"href="index.html"><h1 ><strong style="color: #fff; font-family: ui-monospace; font-size: 30px;">Jitamani Africa</strong></h1></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: right ;">
             <ul class="navbar-nav ml-auto">
@@ -387,14 +357,17 @@
             <div class="col-md-12">
                <div class="row">
                   <div class="col-md-6">
+                     <strong></strong><p></p>
                      <!-- <div class="icon_img"><img src="images/icon-1.png"></div> -->
-                     <h3 class="bitcoin_text" style="color:white;  text-align: start; ">Development Consultancy </h3>
-                     <p class="services_text" style="color:white;  text-align: start; width: 100%;">Strategic Planning,
+                     <h3 class="bitcoin_text" style="color:rgb(255, 255, 255);  text-align: start; ">Development Consultancy </h3>
+                     <p class="services_text" style="color:white;  text-align: start; width: 100%;">
+
+                     <strong style="font-style: bold; color: antiquewhite;">Strategic Planning:</strong>
                         We provide comprehensive business planning and strategy
                         development to help your business navigate the competitive market.
-                        Operational Efficiency, Optimize your operations with our expert guidance to
+                        <br><strong style="font-style: bold; color: antiquewhite;">Operational Efficiency:</strong> Optimize your operations with our expert guidance to
                         enhance productivity and profitability.
-                        Market Analysis, In-depth market research and analysis to identify opportunities
+                        <br><strong style="font-style: bold; color: antiquewhite;">Market Analysis:</strong> In-depth market research and analysis to identify opportunities
                         and inform decision-making.
                      </p>
                      
