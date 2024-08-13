@@ -36,6 +36,70 @@
 
 <body style="margin-top: 0%; padding-top: 0px;">
    <style>
+
+.quote-card-1 {
+            /* position: absolute; */
+            /* background: linear-gradient(145deg, #ffffff, #f9f9f9); Subtle gradient background */
+            border-radius: 15px;
+            padding: 20px;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            /* width: 300px; */
+            text-align: center;
+            color: #333;
+            /* border-left: 5px solid #4a90e2; Blue accent line on the left */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        }
+
+        .quote-card-1:hover {
+            transform: translateY(-5px); /* Slight lift effect */
+            /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); Deeper shadow on hover */
+        }
+
+        .quote-text-1 {
+            font-size: 1.3rem; /* Slightly smaller font size */
+            font-style: italic;
+            margin-bottom: 15px; /* Adjusted margin for spacing */
+            line-height: 1.4; /* Adjusted line-height for readability */
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-author-1 {
+            font-size: 1.0rem; /* Slightly smaller font size */
+            font-weight: bold;
+            color: #4a90e2; /* Accent color for the author */
+            text-transform: uppercase;
+        }
+
+        /* Responsive Styling */
+        @media (min-width: 480px) {
+            .quote-card-1 {
+                padding: 25px;
+                width: 100%; /* Slightly larger width for medium screens */
+            }
+
+            .quote-text-1 {
+                font-size: 1.4rem; /* Slightly larger for medium screens */
+            }
+
+            .quote-author-1 {
+                font-size: 1.1rem; /* Slightly larger for medium screens */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .quote-card-1 {
+                padding: 30px;
+                width: 100%; /* Larger width for larger screens */
+            }
+
+            .quote-text-1 {
+                font-size: 1.5rem; /* Larger font size for larger screens */
+            }
+
+            .quote-author-1 {
+                font-size: 1.2rem; /* Larger font size for larger screens */
+            }
+        }
       .text-container {
          font-size: 2em;
          font-family: Arial, sans-serif;
@@ -349,17 +413,25 @@
    </div>
    
    <!-- header section end -->
+
    <!-- services section start -->
    <div class="services_section layout_padding">
       <div class="container">
+         
          <div class="row">
+            <div class="quote-card-1">
+               <p class="quote-text-1">"We are the ones we’ve been waiting for. We are the change that we seek."</p>
+               <p class="quote-author-1">- Wangari Mathai</p>
+           </div>
             <div class="col-md-12">
+               
                <div class="services_main">
-                  <hr class="border">
-                  <p>
-                     "We are the ones we’ve been waiting for. We are the change that we seek." - Wangari Mathai  </p>
+                 
+                  <!-- <hr class="border"> -->
+                  <!-- <p>
+                     "We are the ones we’ve been waiting for. We are the change that we seek." - Wangari Mathai  </p> -->
                   <!-- <h1 class="services_taital">Our Services</h1> -->
-                  <hr class="border">
+                  <!-- <hr class="border"> -->
                </div>
             </div>
          </div>
@@ -502,12 +574,16 @@
    <div class="services_section layout_padding">
       <div class="container">
          <div class="row">
+            <div class="quote-card-1">
+               <p class="quote-text-1">"It is better to die for an idea that will live, than to live for an idea that will die."</p>
+               <p class="quote-author-1"> – Steve Biko  </p>
+           </div>
             <div class="col-md-12">
                <div class="services_main">
-                  <hr class="border" style="color: #ebe5e5;">
+                  <!-- <hr class="border" style="color: #ebe5e5;">
 <p>  "It is better to die for an idea that will live, than to live for an idea that will die." – Steve Biko  
 </p>
-                  <hr class="border" style="color: #ebe5e5;">
+                  <hr class="border" style="color: #ebe5e5;"> -->
                </div>
             </div>
          </div>
@@ -564,13 +640,16 @@
    <div class="services_section layout_padding">
       <div class="container">
          <div class="row">
+            <div class="quote-card-1">
+               <p class="quote-text-1">"You cannot carry out fundamental change without a certain amount of madness. It comes from nonconformity, the courage to turn your back on the old formulas, the courage to invent the future."</p>
+               <p class="quote-author-1"> - Thomas Sankara    </p>
+           </div>
             <div class="col-md-12">
                <div class="services_main">
-                  <hr class="border" style="color: #ebe5e5;">
+                  <!-- <hr class="border" style="color: #ebe5e5;">
                   <p> "You cannot carry out fundamental change without a certain amount of madness. It comes from nonconformity, the courage to turn your back on the old formulas, the courage to invent the future." - Thomas Sankara  
                   </p>
-                  <!-- <h1 class="services_taital"></h1> -->
-                  <hr class="border" style="color: #ebe5e5;">
+                  <hr class="border" style="color: #ebe5e5;"> -->
                </div>
             </div>
          </div>
@@ -733,14 +812,17 @@
    <div class="services_section layout_padding">
       <div class="container">
          <div class="row">
+            <div class="quote-card-1">
+               <p class="quote-text-1">"To Drive Brand Distinction, We Design Immersive Experiences Fueled By Creativity & Innovation."</p>
+               <p class="quote-author-1">  - Jitamani Africa   </p>
+           </div>
             <div class="col-md-12">
                <div class="services_main">
-                  <hr class="border">
+                  <!-- <hr class="border">
                   <p>
                      "To Drive Brand Distinction, We Design Immersive Experiences Fueled By Creativity & Innovation." - Jitamani Africa
  </p>
-                  <!-- <h1 class="services_taital">Our Services</h1> -->
-                  <hr class="border">
+                  <hr class="border"> -->
                </div>
             </div>
          </div>
