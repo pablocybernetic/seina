@@ -290,151 +290,50 @@
     }
 }
       </style>
-   <div class="header_section " style="background-color: black;">
-      <div class="container sticky">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">
-               <h1><strong style="color: #fff; font-family: ui-monospace; font-size: 30px; padding-left: 30px;">Jitamani
-                     Africa</strong></h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: right ;">
-               <ul class="navbar-nav ml-auto">
-                  <!-- <li class="nav-item">
-                  <a class="nav-link text-light" href="index.html">Who We Are</a>
-               </li> -->
-                 
-                  <li class="nav-item">
-                     <a class="nav-link text-light" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link text-light" href="services.html">Services</a>
-                  </li>
-                  <!-- <li class="nav-item">
-                  <a class="nav-link text-light" href="features.html">Features</a>
-               </li> -->
-                  <!-- <li class="nav-item">
-                  <a class="nav-link text-light" href="team.html">Team</a>
-               </li> -->
-                  <li class="nav-item">
-                     <a class="nav-link text-light" href="blog.html">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link text-light" href="contact.html">Contact Us</a>
-                  </li>
-               </ul>
-               <!-- <form class="form-inline my-2 my-lg-0">
-                      <div class="search_bt">
-                          <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                      </div>
-                  </form> -->
-            </div>
-         </nav>
-         <style>
-            .video-container {
-               position: relative;
-               width: 100%;
-               max-width: 500px;
-               /* You can adjust this as needed */
-               padding-bottom: 100%;
-               /* 1:1 aspect ratio */
-               overflow: hidden;
-               background: #000;
-            }
-
-            .video-container video {
-               position: absolute;
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;
-               object-fit: cover;
-               /* Ensure the video covers the container */
-            }
-
-            #banner-title,
-            #banner-text {
-               /* font-size: 2rem; */
-               white-space: pre-wrap;
-               /* Preserve whitespace and wrapping */
-               overflow-wrap: normal;
-               /* Prevent breaking of words */
-               word-break: normal;
-               /* Prevent breaking of words */
-            }
-
-            .letter {
-               display: inline-block;
-               opacity: 0;
-               animation: fadeIn 0.5s forwards, shimmer 2s infinite;
-            }
-
-            @keyframes fadeIn {
-               to {
-                  opacity: 1;
-               }
-            }
-
-            @keyframes shimmer {
-               0% {
-                  color: #28f7a7;
-               }
-
-               50% {
-                  color: #2949ff;
-               }
-
-               100% {
-                  color: #ebe5e5;
-               }
-            }
-         </style>
-         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-               const titleText = "We are not just an " + " Event and Business  Consultancy ";
-               const subtitleText = "We are both in equal measure";
-               const typingDelay = 100;
-               const pauseDelay = 2000;
-
-               function typeText(elementId, text, delay = 100, callback = null) {
-                  const element = document.getElementById(elementId);
-                  element.innerHTML = '';  // Clear the element
-
-                  Array.from(text).forEach((char, index) => {
-                     const span = document.createElement('span');
-                     span.className = 'letter';
-                     span.style.animationDelay = `${index * delay}ms`;
-                     span.textContent = char;
-
-                     if (char === ' ') {
-                        span.style.width = '0.5em';  // Adjust width for space to handle word spacing
-                     }
-
-                     element.appendChild(span);
-                  });
-
-                  if (callback) {
-                     setTimeout(callback, text.length * delay + pauseDelay);
-                  }
-               }
-
-               function startTypingAnimation() {
-                  typeText('banner-title', titleText, typingDelay, () => {
-                     typeText('banner-text', subtitleText, typingDelay, () => {
-                        setTimeout(startTypingAnimation, pauseDelay);  // Repeat the animation after a pause
-                     });
-                  });
-               }
-
-               startTypingAnimation();
-            });
-         </script>
-
+      <div class="header_section" style="background-color: black; margin-top: 0px; position:relative;">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="index.html">
+                   <h1><strong style="color: #fff; font-family: ui-monospace; font-size: 30px; padding-left: 30px;">Jitamani
+                         Africa</strong></h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: right ;">
+                   <ul class="navbar-nav ml-auto">
+                      <!-- <li class="nav-item">
+                      <a class="nav-link text-light" href="index.html">Who We Are</a>
+                   </li> -->
+                      <li class="nav-item">
+                         <a class="nav-link text-light" href="services.html">Services</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link text-light" href="about.html">About</a>
+                      </li>
+                      <!-- <li class="nav-item">
+                      <a class="nav-link text-light" href="features.html">Features</a>
+                   </li> -->
+                      <!-- <li class="nav-item">
+                      <a class="nav-link text-light" href="team.html">Team</a>
+                   </li> -->
+                      <li class="nav-item">
+                         <a class="nav-link text-light" href="blog.html">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link text-light" href="contact.html">Contact</a>
+                      </li>
+                   </ul>
+                   <!-- <form class="form-inline my-2 my-lg-0">
+                          <div class="search_bt">
+                              <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                          </div>
+                      </form> -->
+                </div>
+             </nav>
+         </div>
       </div>
-   </div>
       <!-- header section end -->
      
 
@@ -658,7 +557,7 @@
                   <div class="footer_social_icon">
                      <ul>
                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
                         <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                      </ul>
