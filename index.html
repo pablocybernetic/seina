@@ -236,46 +236,7 @@
                }
             }
          </style>
-         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-               const titleText = "We are not just an " + " Event and Business  Consultancy ";
-               const subtitleText = "We are both in equal measure";
-               const typingDelay = 100;
-               const pauseDelay = 2000;
-
-               function typeText(elementId, text, delay = 100, callback = null) {
-                  const element = document.getElementById(elementId);
-                  element.innerHTML = '';  // Clear the element
-
-                  Array.from(text).forEach((char, index) => {
-                     const span = document.createElement('span');
-                     span.className = 'letter';
-                     span.style.animationDelay = `${index * delay}ms`;
-                     span.textContent = char;
-
-                     if (char === ' ') {
-                        span.style.width = '0.5em';  // Adjust width for space to handle word spacing
-                     }
-
-                     element.appendChild(span);
-                  });
-
-                  if (callback) {
-                     setTimeout(callback, text.length * delay + pauseDelay);
-                  }
-               }
-
-               function startTypingAnimation() {
-                  typeText('banner-title', titleText, typingDelay, () => {
-                     typeText('banner-text', subtitleText, typingDelay, () => {
-                        setTimeout(startTypingAnimation, pauseDelay);  // Repeat the animation after a pause
-                     });
-                  });
-               }
-
-               startTypingAnimation();
-            });
-         </script>
+    
 
       </div>
    </div>
