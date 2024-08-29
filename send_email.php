@@ -17,16 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Server settings
         $mail->SMTPDebug = 0;                       // Enable verbose debug output
         $mail->isSMTP();                            // Set mailer to use SMTP
-        $mail->Host       = 'smtp.example.com';     // Specify main and backup SMTP servers
+        $mail->Host       = 'mail.jitamaniafrica.com';     // Specify main and backup SMTP servers
         $mail->SMTPAuth   = true;                   // Enable SMTP authentication
-        $mail->Username   = 'your-email@example.com';  // SMTP username
-        $mail->Password   = 'your-email-password';  // SMTP password
+        $mail->Username   = 'support@jitamaniafrica.com';  // SMTP username
+        $mail->Password   = '%.P$!p5~%!Vb';  // SMTP password
         $mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
-        $mail->Port       = 587;                    // TCP port to connect to
+        $mail->Port       = 465;                    // TCP port to connect to
 
         // Recipients
-        $mail->setFrom('your-email@example.com', 'Mailer');
-        $mail->addAddress('recipient@example.com', 'Recipient');  // Add a recipient
+        $mail->setFrom('support@jitamaniafrica.com', 'Mailer');
+        $mail->addAddress('gitaup08@gmail.com', 'Recipient');  // Add a recipient
         $mail->addReplyTo($email, $name);                         // Add reply-to address
 
         // Content
